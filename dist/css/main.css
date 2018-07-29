@@ -25,7 +25,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.98;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -59,6 +59,7 @@
       width: 250px;
       height: 250px;
       background: url("../images/portrait.jpg");
+      background-size: contain;
       border-radius: 50%;
       border: solid 5px #39eaf0; }
   .menu .nav-item {
@@ -109,7 +110,8 @@ body {
   body#bg-img {
     background: url(../images/headerImage.jpeg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-repeat: no-repeat; }
     body#bg-img:after {
       content: "";
       position: absolute;
@@ -118,7 +120,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.5); }
+      background: rgba(68, 68, 68, 0.6); }
 
 h1,
 h2,
@@ -135,7 +137,7 @@ h3 {
     margin-bottom: 2rem;
     border-radius: 5px;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(73, 73, 73, 0.8); }
 
 a {
   color: #fff;
@@ -167,15 +169,14 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bi bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
     border: #39eaf0 3px solid;
-    width: 100%;
-    height: 100%; }
+    width: 250px; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -212,7 +213,7 @@ main {
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 1.5rem;
     margin-bottom: 3rem;
     transition: all 0.7s ease-out; }
     .boxes div:hover {
@@ -281,7 +282,8 @@ main {
     .menu-branding .portrait {
       background: url("../images/portrait.jpg");
       width: 150px;
-      height: 150px; }
+      height: 150px;
+      background-size: contain; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
